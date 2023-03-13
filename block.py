@@ -19,7 +19,8 @@ if spam < 5:
     print('Hello, world')
     spam = spam + 1
 
-#uing while loop
+#using while loop
+#The while loop keep looping its condition is True
 while spam < 5:
     print(spam)
     spam = spam + 1
@@ -39,8 +40,32 @@ while True:
     name = input()
     if name != 'Tom':
         continue
-    print ('Hello, Joe. What is the password ? ( it is a fish.)')
+    print ('Hello, Tom. What is the password ? ( it is a fish.)')
     password = input()
     if password == '123':
         break
 print('Access granted')
+
+
+# for Loops and the range() Function
+# this is use to execute a block of code only for a certain number of times
+x = range(2, 10, 5)
+for i in x:
+    print(i)
+
+print('My name is ')
+for i in range(5):
+    print('Jimmy Five Time(' + str(i) + ')') # this print 5 times
+
+
+total = 0
+for num in range(101):
+    total = total + num
+print(total)
+
+# using while loop to do the for loop job 
+print ('My name is')
+i = 0
+while i < 5 :
+    print ('Jimmy Five Times (' + str(i) +')')
+    i = i + 1
