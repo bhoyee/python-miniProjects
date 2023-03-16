@@ -76,3 +76,42 @@ while i < 5 :
 import random
 for i in range(5):
     print(random.randint(1,10))
+
+
+# working with function 
+import random
+
+def getAnswer(answerNumber): #elear a function
+    if answerNumber == 1:
+        return 'It is certain'
+    elif answerNumber == 2:
+        return 'it is decidedly so'
+    elif answerNumber >= 7:
+        return 'You in the right path'
+    elif answerNumber >3 and answerNumber < 7 :
+        return 'it still fair'
+    elif answerNumber < 1:
+        return 'bad request'
+    
+r = random.randint(-1, 9)
+
+print('This number generated is', + r)
+fortune = getAnswer(r)
+print(fortune)
+
+# using local and global variable
+
+eggs = 5  # global variable
+def spam():
+    eggs = 31333 # local variable
+spam()
+
+
+# handling exception handling
+def spam(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        print('Error : Invalid argument.')
+
+print(spam(0))
