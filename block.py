@@ -102,16 +102,32 @@ print(fortune)
 # using local and global variable
 
 eggs = 5  # global variable
-def spam():
+def spam1():
     eggs = 31333 # local variable
-spam()
+spam1()
 
 
 # handling exception handling
-def spam(divideBy):
+def spams(divideBy):
     try:
         return 42 / divideBy
     except ZeroDivisionError:
         print('Error : Invalid argument.')
 
-print(spam(0))
+print(spams(0))
+
+# working with list
+supplies = ['pens', 'staplers', 'flamethrowers', 'binders']
+for i in range(len(supplies)):
+    print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+    
+
+# using in and not in operators
+
+myPets = ['Zophie', 'Pooka', 'Fat-tail']
+print('Enter a pet name:')
+name = input()
+if name not in myPets:
+ print('I do not have a pet named ' + name)
+else:
+ print(name + ' is my pet.')
