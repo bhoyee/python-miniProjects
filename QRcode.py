@@ -1,5 +1,8 @@
 import qrcode
+from pyzbar.pyzbar import decode
+from PIL import Image
 
+#encode data into qrcode 
 data = 'Don\'t forget to subscribe'
 qr = qrcode.QRCode(version = 1, box_size=10, border=5)
 
@@ -11,3 +14,12 @@ img = qr.make_image(fill_color = 'red', back_color = 'white')
 
 #path to save the qrcode
 img.save('C:/Users/Bhoyee-pc/Documents/python-demo/demo/qrcode/myqrcode.png')
+
+
+
+#decode data in qrcode
+img = Image.open('C:/Users/Bhoyee-pc/Documents/python-demo/demo/qrcode/myqrcode.png')
+
+result = decode(img)
+
+print(result)
