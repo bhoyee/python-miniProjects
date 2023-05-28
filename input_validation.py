@@ -19,4 +19,4 @@ import pyinputplus as pyip
 
 response = pyip.inputInt(prompt='Enter a number: ')
 res6 = pyip.inputNum('Enter num: ', min=4) 
-print(response + ',' + res6)
+print(str(response) + ',' + str(res6))
