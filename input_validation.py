@@ -12,3 +12,11 @@ while True:
         continue
     break
 print(f'Your age is {age}.')
+
+
+# uing 3rdparty ( PyInputPlus Module)
+import pyinputplus as pyip
+
+response = pyip.inputInt(prompt='Enter a number: ')
+res6 = pyip.inputNum('Enter num: ', min=4) 
+print(response + ',' + res6)
