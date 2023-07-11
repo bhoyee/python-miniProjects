@@ -27,6 +27,4 @@ def _decode_():
 
 
 _encode_()
-_decode_
-
-
+_decode_()
