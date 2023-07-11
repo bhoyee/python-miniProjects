@@ -11,10 +11,17 @@ def rename_images(folder_path):
     image_files.sort()
     
     # Rename and change the extension of each image file
-    for i, image_file in enumerate(image_files):
+    for i, image_file in enumerate(image_files, start=1):
         old_path = os.path.join(folder_path, image_file)
-        new_file_name = f"{i + 1}.jpg"
+        new_file_name = f"{i}.jpg"
         new_path = os.path.join(folder_path, new_file_name)
+        
+        # Check if an image with the same new name already exists
+        while os.path.exists(new_path):
+            i += 1
+            new_file_name = f"{i}.jpg"
+            new_path = os.path.join(folder_path, new_file_name)
+        
         os.rename(old_path, new_path)
     
     print("Image renaming complete.")
